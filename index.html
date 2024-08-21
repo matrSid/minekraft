@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fullscreen iframe with Agreement</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden;
+            font-family: 'Press Start 2P', cursive;
+            background-image: url('bg.gif');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        #agreement-popup {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+        #agreement-content {
+            background-color: rgba(198, 198, 198, 0.9);
+            border: 3px solid #fff;
+            outline: 3px solid #000;
+            padding: 20px;
+            text-align: center;
+            max-width: 80%;
+            box-shadow: 5px 5px 0px #555;
+        }
+        #agreement-content p {
+            font-size: 14px;
+            margin-bottom: 20px;
+            color: #000;
+            line-height: 1.5;
+        }
+        .btn {
+            padding: 10px 20px;
+            font-size: 12px;
+            cursor: pointer;
+            border: 2px solid #000;
+            margin: 0 10px;
+            font-family: 'Press Start 2P', cursive;
+            text-transform: uppercase;
+            box-shadow: 3px 3px 0px #000;
+        }
+        #agree-btn {
+            background-color: #54cc54;
+            color: #000;
+        }
+        #disagree-btn {
+            background-color: #cc5454;
+            color: #000;
+        }
+        .btn:hover {
+            transform: translate(2px, 2px);
+            box-shadow: 1px 1px 0px #000;
+        }
+        #fullscreen-iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="agreement-popup">
+        <div id="agreement-content">
+            <p>THIS WEBSITE IS MADE AND HOSTED BY SID, DO NOT RESELL OR FORK</p>
+            <button id="agree-btn" class="btn">I understand</button>
+            <button id="disagree-btn" class="btn">I'm stupid</button>
+        </div>
+    </div>
+    <iframe id="fullscreen-iframe" src="about:blank"></iframe>
+
+    <script>
+        document.getElementById('agree-btn').addEventListener('click', function() {
+            document.getElementById('agreement-popup').style.display = 'none';
+            document.getElementById('fullscreen-iframe').src = 'https://sd592g.github.io/zj684od4lfg/';
+        });
+
+        document.getElementById('disagree-btn').addEventListener('click', function() {
+            window.location.href = 'https://youareanidiot.cc';
+        });
+
+
+
+    </script>
+</body>
+</html>
